@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HOME - IFSP - Pirituba - DWBA4</title>
+  <link rel="icon" href="https://raw.githubusercontent.com/DWBA4/dwba4_semana_imagens/master/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Adicionando bibliotecas React e ReactDOM via CDN -->
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+  
+  <!-- Script Babel para JSX -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+</head>
+<body>
+  <!-- Elemento de Montagem do React -->
+  <div id="root"></div>
+
+  <!-- Script para React -->
+  <script type="text/babel">
+    // Componentes React diretamente no arquivo HTML
+    
+    const Menu = () => (
+      <div className="menu">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="Eventos.html">EVENTOS</a></li>
+          <li><a href="contato.html">CONTATO</a></li>
+          <li className="submenu-item">
+            <a href="#">CURSOS</a>
+            <ul className="submenu">
+              <li><a href="#">Opção 1</a></li>
+              <li><a href="#">Opção 2</a></li>
+            </ul>
+          </li>
+          <li><a href="Entrar.html">ENTRAR</a></li>
+          <li className="sobre"><a href="sobre.html">SOBRE</a></li>
+        </ul>
+      </div>
+    );
+
+    const Content = () => (
+      <div className="content">
+        <div className="logo">
+          <img
+            src="https://github.com/DWBA4/dwba4_semana_imagens/blob/master/Logo.jpg?raw=true"
+            alt="Instituto Federal de São Paulo"
+          />
+        </div>
+        <div className="description">
+          <p>
+            O <strong>Instituto Federal de Educação, Ciência e Tecnologia de São Paulo</strong> é uma autarquia federal de ensino.
+            Fundada em 1909, como Escola de Aprendizes Artífices, é reconhecida pela sociedade paulista por sua excelência no ensino público gratuito de qualidade.
+          </p>
+          <!-- Continue adicionando o texto conforme necessário -->
+        </div>
+      </div>
+    );
+
+    const Footer = () => (
+      <footer>
+        <a href="https://www.facebook.com/ifsppirituba">
+          <img
+            src="https://github.com/DWBA4/dwba4_semana_imagens/blob/master/facebook.png?raw=true"
+            width="30px"
+            height="30px"
+            title="IFSP Facebook"
+            alt="Facebook Icon"
+          />
+        </a>
+        <address>
+          IFSP - Câmpus Pirituba - Av. Mutinga, 951 - Jardim Santo Elias - CEP: 05110-000 - São Paulo/SP - Contato:
+          (011) 2504-0100
+        </address>
+      </footer>
+    );
+
+    const App = () => (
+      <div>
+        <Menu />
+        <Content />
+        <Footer />
+      </div>
+    );
+
+    ReactDOM.render(<App />, document.getElementById('root'));
+  </script>
+</body>
+</html>
